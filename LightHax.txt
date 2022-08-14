@@ -1,0 +1,85 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextBox = Instance.new("TextBox")
+local Execute = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.Position = UDim2.new(0.578241408, 0, 0.600741684, 0)
+Frame.Size = UDim2.new(0, 515, 0, 263)
+Frame.Draggable = true
+Frame.Active = true
+Frame.Selectable = true
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextBox.Position = UDim2.new(0.0303530786, 0, 0.110007629, 0)
+TextBox.Size = UDim2.new(0, 487, 0, 194)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.MultiLine = true
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(200, 200, 200)
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+Execute.Name = "Execute"
+Execute.Parent = Frame
+Execute.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Execute.Position = UDim2.new(0.0310679618, 0, 0.885496199, 0)
+Execute.Size = UDim2.new(0, 133, 0, 21)
+Execute.Font = Enum.Font.SourceSans
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(0, 0, 0)
+Execute.TextSize = 14.000
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.328155339, 0, 0.885496199, 0)
+TextButton.Size = UDim2.new(0, 147, 0, 21)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Clear"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextLabel.BorderColor3 = Color3.fromRGB(30, 30, 30)
+TextLabel.Position = UDim2.new(-0.00039935112, 0, -1.87754631e-05, 0)
+TextLabel.Size = UDim2.new(0, 50, 0, 17)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "LightHax"
+TextLabel.TextColor3 = Color3.fromRGB(200, 2000, 2000)
+TextLabel.TextSize = 14.000
+
+-- Scripts:
+
+local function MRDOVT_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	local cool = script.Parent.Parent.TextBox
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(cool.Text)()
+		end)
+end
+coroutine.wrap(MRDOVT_fake_script)()
+local function JVJPKCN_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local cool = script.Parent.Parent.TextBox
+	script.Parent.MouseButton1Click:Connect(function()
+		cool.Text = ""
+	end)
+	
+end
+coroutine.wrap(JVJPKCN_fake_script)()
