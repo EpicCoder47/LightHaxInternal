@@ -21,6 +21,7 @@ Frame.Size = UDim2.new(0, 515, 0, 263)
 Frame.Draggable = true
 Frame.Active = true
 Frame.Selectable = true
+Frame.ResetOnSpawn = true
 
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
