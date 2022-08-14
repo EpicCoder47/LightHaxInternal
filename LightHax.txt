@@ -13,6 +13,7 @@ local TextLabel = Instance.new("TextLabel")
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -21,7 +22,6 @@ Frame.Size = UDim2.new(0, 515, 0, 263)
 Frame.Draggable = true
 Frame.Active = true
 Frame.Selectable = true
-Frame.ResetOnSpawn = true
 
 TextBox.Parent = Frame
 TextBox.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
@@ -65,7 +65,7 @@ TextLabel.TextSize = 14.000
 
 -- Scripts:
 
-local function MRDOVT_fake_script() -- Execute.LocalScript 
+local function BSOXP_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local cool = script.Parent.Parent.TextBox
@@ -73,8 +73,8 @@ local function MRDOVT_fake_script() -- Execute.LocalScript
 		loadstring(cool.Text)()
 		end)
 end
-coroutine.wrap(MRDOVT_fake_script)()
-local function JVJPKCN_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(BSOXP_fake_script)()
+local function VDIHPTD_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local cool = script.Parent.Parent.TextBox
@@ -83,4 +83,4 @@ local function JVJPKCN_fake_script() -- TextButton.LocalScript
 	end)
 	
 end
-coroutine.wrap(JVJPKCN_fake_script)()
+coroutine.wrap(VDIHPTD_fake_script)()
