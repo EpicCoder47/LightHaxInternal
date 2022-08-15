@@ -1,0 +1,56 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Detected = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.Position = UDim2.new(0.800740242, 0, 0.692212641, 0)
+Frame.Size = UDim2.new(0, 296, 0, 193)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+TextLabel.BorderColor3 = Color3.fromRGB(20, 20, 20)
+TextLabel.Position = UDim2.new(0, 0, -0.000160019626, 0)
+TextLabel.Size = UDim2.new(0, 295, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Console"
+TextLabel.TextColor3 = Color3.fromRGB(500, 500, 500)
+TextLabel.TextSize = 38.000
+TextLabel.TextWrapped = true
+
+Detected.Name = "Detected"
+Detected.Parent = Frame
+Detected.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Detected.Position = UDim2.new(0.0202702694, 0, 0.290155441, 0)
+Detected.Size = UDim2.new(0, 283, 0, 15)
+Detected.Font = Enum.Font.SourceSans
+Detected.TextColor3 = Color3.fromRGB(32, 201, 22)
+Detected.TextSize = 14.000
+
+-- Scripts:
+
+local function RSBK_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	if syn then 
+		script.Parent.Frame.Detected.Text = "Synapse X Has Been Detected!" 
+	else
+	    script.Parent.Frame.Detected.Text = "Synapse X Has Not Been Detected!" 
+	    end
+	
+	
+	
+	
+	
+end
+coroutine.wrap(RSBK_fake_script)()
